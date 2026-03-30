@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Sent | Airenvo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <a href="/index.html" class="logo">
+            <div class="logo-wrapper">
+                <img src="images/logo.jpeg" alt="Airenvo Logo">
+                <span class="logo-text">Airenvo</span>
+            </div>
+        </a>
+        
+        <button class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu">
+            <li><a href="/index.html#hero">Home</a></li>
+            <li><a href="/index.html#ecopulse">EcoPulse Tree</a></li>
+            <li><a href="/index.html#impact">Impact</a></li>
+            <li><a href="/index.html#portfolio">Our Work</a></li>
+            <li><a href="/index.html#roadmap">Roadmap</a></li>
+            <li><a href="/index.html#team">Team</a></li>
+            <li><a href="/index.html#contact" class="btn-nav">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <section class="section" style="min-height: 60vh; display: flex; align-items: center; justify-content: center;">
+        <div class="container small-container text-center">
+            <h1 style="margin-bottom: 20px;">Thank You!</h1>
+            <p class="large-text" style="margin-bottom: 40px;">Your message has been successfully sent. We appreciate you reaching out and will get back to you as soon as possible.</p>
+            <a href="/index.html" class="btn btn-primary">Return to Homepage</a>
+        </div>
+    </section>
+
+    <footer class="footer dark-section">
+        <div class="container text-center">
+            <h3>Airenvo</h3>
+            <p>Building integrated solutions for the future of sustainability.</p>
+            <div style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                <p>&copy; 2026 Airenvo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Keeping the mobile menu script so the navbar works on mobile here too
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
